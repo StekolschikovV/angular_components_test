@@ -73,55 +73,48 @@
         <div group>
             <!--Панель управления-->
             <material-list-item (click)="setPage('Панель управления')">
-                Панель управления
+                <a [routerLink]="RoutePaths.page1.toUrl()">Панель управления</a>
             </material-list-item>
 
             <!--Анализ-->
             <material-expansionpanel class="dense"
                                      [showSaveCancel]="false"
                                      name="Анализ ">
-                <material-list-item (click)="setPage('Анализ ABC (динамический)')">Анализ ABC (динамический)</material-list-item>
-                <material-list-item (click)="setPage('Адаптированная бостонская матрица')">Адаптированная бостонская матрица</material-list-item>
+                <material-list-item (click)="setPage('Анализ ABC (динамический)')"><a [routerLink]="RoutePaths.page1.toUrl()">Анализ ABC (динамический)</a></material-list-item>
+                <material-list-item (click)="setPage('Адаптированная бостонская матрица')"><a [routerLink]="RoutePaths.page2.toUrl()">Адаптированная бостонская матрица</a></material-list-item>
             </material-expansionpanel>
 
             <!--Конструктор-->
             <material-expansionpanel class="dense"
                                      [showSaveCancel]="false"
                                      name="Конструктор ">
-                <material-list-item (click)="setPage('Конструктор отчетов - Табличный вид')">Конструктор отчетов - Табличный вид</material-list-item>
-                <material-list-item (click)="setPage('Конструктор отчетов - Сопоставление показателей')">Конструктор отчетов - Сопоставление показателей</material-list-item>
-                <material-list-item (click)="setPage('Конструктор отчетов - По 4 измерениям')">Конструктор отчетов - По 4 измерениям</material-list-item>
-                <material-list-item (click)="setPage('Конструктор отчетов - Графический анализ')">Конструктор отчетов - Графический анализ</material-list-item>
-                <material-list-item (click)="setPage('Конструктор отчетов - Анализ структуры продаж')">Конструктор отчетов - Анализ структуры продаж</material-list-item>
-                <material-list-item (click)="setPage('Конструктор отчетов - Произвольное сравнение')">Конструктор отчетов - Произвольное сравнение </material-list-item>
-                <material-list-item (click)="setPage('Конструктор отчетов - Распределение свойств')">Конструктор отчетов - Распределение свойств </material-list-item>
+                <material-list-item (click)="setPage('Конструктор отчетов - Табличный вид')"><a [routerLink]="RoutePaths.page1.toUrl()">Конструктор отчетов - Табличный вид</a></material-list-item>
+                <material-list-item (click)="setPage('Конструктор отчетов - Сопоставление показателей')"><a [routerLink]="RoutePaths.page2.toUrl()">Конструктор отчетов - Сопоставление показателей</a></material-list-item>
+                <material-list-item (click)="setPage('Конструктор отчетов - По 4 измерениям')"><a [routerLink]="RoutePaths.page1.toUrl()">Конструктор отчетов - По 4 измерениям</a></material-list-item>
+                <material-list-item (click)="setPage('Конструктор отчетов - Графический анализ')"><a [routerLink]="RoutePaths.page2.toUrl()">Конструктор отчетов - Графический анализ</a></material-list-item>
+                <material-list-item (click)="setPage('Конструктор отчетов - Анализ структуры продаж')"><a [routerLink]="RoutePaths.page1.toUrl()">Конструктор отчетов - Анализ структуры продаж</a></material-list-item>
+                <material-list-item (click)="setPage('Конструктор отчетов - Произвольное сравнение')"><a [routerLink]="RoutePaths.page2.toUrl()">Конструктор отчетов - Произвольное сравнение</a></material-list-item>
+                <material-list-item (click)="setPage('Конструктор отчетов - Распределение свойств')"><a [routerLink]="RoutePaths.page1.toUrl()">Конструктор отчетов - Распределение свойств</a></material-list-item>
             </material-expansionpanel>
 
             <!--Номенкла-->
             <material-expansionpanel class="dense"
                                      [showSaveCancel]="false"
                                      name="Номенкла ">
-                <material-list-item (click)="setPage('Упущенная прибыль/продажи')">Упущенная прибыль/продажи</material-list-item>
-                <material-list-item (click)="setPage('Матрица')">Матрица</material-list-item>
-                <material-list-item (click)="setPage('Остатки')">Остатки</material-list-item>
+                <material-list-item (click)="setPage('Упущенная прибыль/продажи')"><a [routerLink]="RoutePaths.page1.toUrl()">Упущенная прибыль/продажи</a></material-list-item>
+                <material-list-item (click)="setPage('Матрица')"><a [routerLink]="RoutePaths.page2.toUrl()">Матрица</a></material-list-item>
+                <material-list-item (click)="setPage('Остатки')"><a [routerLink]="RoutePaths.page1.toUrl()">Остатки</a></material-list-item>
             </material-expansionpanel>
 
             <!--Магазины-->
             <material-expansionpanel class="dense"
                                      [showSaveCancel]="false"
                                      name="Магазины ">
-                <material-list-item (click)="setPage('План/Факт по магазинам')">План/Факт по магазинам</material-list-item>
-                <material-list-item (click)="setPage('Динамика к предыдущему месяцу')">Динамика к предыдущему месяцу</material-list-item>
-                <material-list-item (click)="setPage('Динамика 3 лет')">Динамика 3 лет</material-list-item>
+                <material-list-item (click)="setPage('План/Факт по магазинам')"><a [routerLink]="RoutePaths.page2.toUrl()">План/Факт по магазинам</a></material-list-item>
+                <material-list-item (click)="setPage('Динамика к предыдущему месяцу')"><a [routerLink]="RoutePaths.page1.toUrl()">Динамика к предыдущему месяцу</a></material-list-item>
+                <material-list-item (click)="setPage('Динамика 3 лет')"><a [routerLink]="RoutePaths.page2.toUrl()">Динамика 3 лет</a></material-list-item>
             </material-expansionpanel>
-
         </div>
-
-        <!--<div group *ngFor="let el of menuLeft" >-->
-            <!--&lt;!&ndash;<material-list-item>&ndash;&gt;-->
-                <!--&lt;!&ndash;{{el}}&ndash;&gt;-->
-            <!--&lt;!&ndash;</material-list-item>&ndash;&gt;-->
-        <!--</div>-->
 
     </material-list>
 </material-drawer>
@@ -135,11 +128,7 @@
         </div>
     </header>
     <div>
-        Lorem ipsum dolor sit amet, ad erat postea ullamcorper nec, veri veniam quo
-        et. Diam phaedrum ei mea, quaeque voluptaria efficiantur duo no. Eu adhuc
-        veritus civibus nec, sumo invidunt mel id, in vim dictas detraxit. Per an
-        legere iriure blandit. Veri iisque accusamus an pri.
-
-
+        <router-outlet [routes]="Routes.all"></router-outlet>
     </div>
 </div>
+

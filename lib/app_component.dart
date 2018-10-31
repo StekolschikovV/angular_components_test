@@ -38,11 +38,15 @@ import 'package:angular_components/annotations/rtl_annotation.dart';
 import 'package:angular_components/content/deferred_content.dart';
 import 'package:angular_components/material_tab/material_tab.dart';
 import 'package:angular_components/material_tab/material_tab_panel.dart';
-
+import './src/components/page1/page1.dart';
+import './src/components/page2/page2.dart';
+import 'package:angular_router/angular_router.dart';
+import './routes.dart';
 
 @Component(
   selector: 'my-app',
   directives: [
+    routerDirectives,
     MaterialButtonComponent,
     MaterialIconComponent,
     DeferredContentDirective,
@@ -67,15 +71,19 @@ import 'package:angular_components/material_tab/material_tab_panel.dart';
     MaterialTemporaryDrawerComponent,
     MaterialTabPanelComponent,
     MaterialTabComponent,
+    MyPage
   ],
   templateUrl: 'app_component.html',
   styleUrls: [
     'package:angular_components/css/mdc_web/card/mdc-card.scss.css',
     'package:angular_components/app_layout/layout.scss.css',
+    'app_component.css',
   ],
-  providers: [overlayBindings, rtlProvider],
+  providers:  [overlayBindings, rtlProvider, Routes],
+  exports: [RoutePaths, Routes],
 
 )
+
 
 
 @Directive(
@@ -90,6 +98,8 @@ class AppComponent {
   bool visible = false;
 
   String pageTitle = 'Панель управления';
+
+  AppComponent(Routes routes);
 
   List<String> menuLeft = ['Link 1', 'Link 2', 'Link 3'];
   void setPage(String title){
